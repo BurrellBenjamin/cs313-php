@@ -1,0 +1,12 @@
+body {
+    background-color:antiquewhite;
+}
+
+div{
+    background-color:skyblue;
+    min-width: 10px;
+    min-height: 20px;
+}
+.color-box:hover{
+    font-weight: bold;
+}
