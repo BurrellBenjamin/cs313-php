@@ -26,7 +26,7 @@
                 given (damaging) move does, with a little random number variation
                 for extra fun and frustration.
             </p>
-            <a href="https://bulbapedia.bulbagarden.net/wiki/Damage"><img src="damageCalc.png" alt="Damage Calculation formula for Pokemon"></a>
+            <a href="https://bulbapedia.bulbagarden.net/wiki/Damage"><img id="damageCalc" src="damageCalc.png" alt="Damage Calculation formula for Pokemon"></a>
             <br>
             <p>Math aside, the sheer volume of critical thinking that goes into
                 competitive Pokemon is staggering enough to convince scoffers of

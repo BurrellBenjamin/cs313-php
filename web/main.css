@@ -5,12 +5,22 @@ body {
     float: right;
     right: 0;
     top: 0;
+    height: 187;
+    width: 187;
 }
 #claydol {
     float: left;
     left:0;
     top: 100px;
+    height: 187;
+    width: 187;
 }
 #container {
     width:auto;
+}
+#damageCalc{
+    align-content: center;
+}
+iframe{
+    align-content: center;
 }
