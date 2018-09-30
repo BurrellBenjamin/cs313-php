@@ -13,7 +13,6 @@ body {
     float: left;
     position: relative;
     left: 0;
-    top: 100px;
     height: 187;
     width: 187;
 }
@@ -21,9 +20,13 @@ body {
     width:auto;
 }
 #damageCalc{
-    
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
 }
 iframe{
+    display:block;
     margin-left: auto;
     margin-right: auto;
     width:50%;
