@@ -10,7 +10,8 @@
             <?php include 'menu.php'; ?>
         </header>
         <main>
-            <p id="first">My name is Ben Burrell. I live with my wife and puppy, and I
+            <div id="container">
+                <p id="first">My name is Ben Burrell. I live with my wife and puppy, and I
                 enjoy playing video games. My favorite game is Pokemon, and
                 I'm in the midst of starting up my own competitive Draft League.
                 (details forthcoming). Two of my personal favorite Pokemon to play
@@ -35,7 +36,7 @@
             </p>
             <iframe width="420" height="345" src="https://www.youtube.com/embed/mWvnCM3x_-k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <br>
-            
+            </div>
         </main>
     </body>
 </html>
