@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" src="main.css">
         <title>Ben Burrell's Homepage</title>
     </head>
-    <body>
+    <body id="mainbody">
         <header>
             <?php include 'menu.php'; ?>
         </header>
