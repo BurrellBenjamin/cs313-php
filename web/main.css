@@ -2,13 +2,11 @@ body {
     background-color: lightgray;
 }
 #dusclops {
-    position:absolute;
     float: right;
     right: 0;
     top: 0;
 }
 #claydol {
-    position:absolute;
     float: left;
     left:0;
     top: 100px;
