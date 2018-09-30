@@ -5,12 +5,12 @@
         <link rel="stylesheet" type="text/css" href="main.css">
         <title>Ben Burrell's Homepage</title>
     </head>
-    <body id="mainbody">
+    <body>
         <header>
             <?php include 'menu.php'; ?>
         </header>
         <main>
-            <p>My name is Ben Burrell. I live with my wife and puppy, and I
+            <p id="first">My name is Ben Burrell. I live with my wife and puppy, and I
                 enjoy playing video games. My favorite game is Pokemon, and
                 I'm in the midst of starting up my own competitive Draft League.
                 (details forthcoming). Two of my personal favorite Pokemon to play
