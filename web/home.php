@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" src="main.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
         <title>Ben Burrell's Homepage</title>
     </head>
     <body id="mainbody">
