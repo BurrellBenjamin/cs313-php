@@ -33,7 +33,7 @@
                 to watch this video where a Pokemon Youtuber legitimately takes
                 30 minutes to plan for his match.
             </p>
-            <iframe src="https://www.youtube.com/embed/mWvnCM3x_-k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/mWvnCM3x_-k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <br>
             
         </main>
