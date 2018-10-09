@@ -2,9 +2,10 @@
 session_start();
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
+    echo "Recieved";
     foreach($_POST as $x => $x_val)
     {
-        addItems($_POST[$x]);
+        echo $_POST[$x];
     }
 }
 
