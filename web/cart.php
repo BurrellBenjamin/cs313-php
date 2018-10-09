@@ -4,7 +4,7 @@ session_start();
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     foreach($_POST as $x => $x_val)
     {
-        addItems($_POST);
+        addItems($_POST[$x]);
     }
 }
 
