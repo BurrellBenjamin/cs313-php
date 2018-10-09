@@ -12,7 +12,7 @@ else if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST)){
 
 function findItem($itemName)
 {
-    for($x=0; $x < $_SESSION["cartSize"] -1; $x++)
+    for($x=0; $x < $_SESSION["cartSize"]; $x++)
     {
         if ($_SESSION["cart"][$x] == $itemName)
             return $x;
@@ -28,13 +28,13 @@ function addItems($itemIndex)
 function removeItems($cartIndex)
 {
     echo $cartIndex;
-    if($cartIndex < $_SESSION["cartSize"] -1)
-    {
+    #if($cartIndex < $_SESSION["cartSize"] -1)
+    #{
         for($x=$cartIndex; $x < $_SESSION["cartSize"] -1; $x++)
         {
             $_SESSION["cart"][$x] = $_SESSION["cart"][$x + 1];
         }
-    }
+    #}
     $_SESSION["cart"][$_SESSION["cartSize"]] = null;
     $_SESSION["cartSize"]--;
 }
