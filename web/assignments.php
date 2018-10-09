@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
     <head>
+        <title>Assignments</title>
+        <link rel="stylesheet" href="main.css" type="text/css">
     </head>
     <body>
         <header><?php include 'menu.php'?></header>
