@@ -27,14 +27,10 @@ function addItems($itemIndex)
 
 function removeItems($cartIndex)
 {
-    echo $cartIndex;
-    #if($cartIndex < $_SESSION["cartSize"] -1)
-    #{
-        for($x=$cartIndex; $x < $_SESSION["cartSize"] -1; $x++)
-        {
-            $_SESSION["cart"][$x] = $_SESSION["cart"][$x + 1];
-        }
-    #}
+    for($x=$cartIndex; $x < $_SESSION["cartSize"] -1; $x++)
+    {
+        $_SESSION["cart"][$x] = $_SESSION["cart"][$x + 1];
+    }
     $_SESSION["cart"][$_SESSION["cartSize"]] = null;
     $_SESSION["cartSize"]--;
 }

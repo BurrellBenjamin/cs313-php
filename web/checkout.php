@@ -26,6 +26,8 @@
                     ?>
                 </ul>
             </form>
+            <hr>
+            <p>To remove an item from your cart, press the button with its name.</p>
             <a href="Prove03.php">Add More to Cart</a> - - <a href="delivery.php">Finish Checking Out</a>
         </main>
     </body>
