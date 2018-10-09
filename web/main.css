@@ -36,7 +36,7 @@ iframe{
     width:33.33%;
     padding:10px;
 }
-.productTable:after{
+#productTable:after{
     content: "";
     display: table;
     clear: both;
