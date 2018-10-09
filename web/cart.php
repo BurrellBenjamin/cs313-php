@@ -1,8 +1,11 @@
 <?php
 session_start();
 
-if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST[0])){
-    addItems($_POST[0].value);
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    foreach($_POST as $x => $x_val)
+    {
+        addItems($_POST);
+    }
 }
 
 $_SESSION[cart] = array();
