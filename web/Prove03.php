@@ -21,8 +21,8 @@
                     require 'cart.php';
                     require 'listings.php';
                     
-                    $_SESSION[cart] = array();
-                    $_SESSION[cartSize] = 0;
+                    $_SESSION["cart"] = array();
+                    $_SESSION["cartSize"] = 0;
 
                     $salesArray1 = array();
                     $salesArray2 = array();
