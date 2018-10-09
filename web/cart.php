@@ -7,9 +7,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     }
 }
 
-$_SESSION[cart] = array();
-$_SESSION[cartSize] = 0;
-
 function addItems($itemIndex)
 {
     $_SESSION[cart][$_SESSION[cartSize]] = $itemIndex;
