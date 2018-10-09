@@ -6,16 +6,16 @@
     </head>
     <body>
         <header>
-            <?php include 'menu.php';?>
+            <?php include 'menu.php'; ?>
             <h1>Your Cart:</h1>
             <hr>
         </header>
         <main>
             <ul>
                 <?php
-                    include 'cart.php';
+                    require 'cart.php';
                 for($x = 0; $x < $_SESSION[cartSize]; $x++)
-                    echo "<li>$_SESSION[cart][$x]</li>"
+                    echo "<li>$_SESSION[cart][$x]</li>";
                     ?>
             </ul>
         </main>

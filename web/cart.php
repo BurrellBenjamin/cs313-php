@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if($_SERVER['REQUEST_METHOD'] == "POST"){
-    echo "Recieved";
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
     foreach($_POST as $x => $x_val)
     {
         addItems($_POST[$x]);
