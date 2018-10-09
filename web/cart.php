@@ -5,7 +5,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     echo "Recieved";
     foreach($_POST as $x => $x_val)
     {
-        echo $_POST[$x];
+        addItems($_POST[$x]);
     }
 }
 

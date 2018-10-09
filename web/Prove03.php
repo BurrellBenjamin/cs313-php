@@ -9,6 +9,9 @@
             <?php include 'menu.php';?>
             
             <h1>Welcome to the Online Grocery Store!</h1>
+            <hr>
+            <p>Click a button to add the corresponding item to your cart. Click
+                Checkout when you're ready to checkout.</p>
         </header>
         <main>
             <form action="Prove03.php" method="post">
@@ -59,6 +62,7 @@
                     ?> 
                 </div>
             </form>
+            <a href="checkout.php">Checkout/View Cart</a>
         </main>
     </body>
 </html>
