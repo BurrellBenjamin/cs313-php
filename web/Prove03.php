@@ -7,6 +7,8 @@
     <body>
         <header>
             <?php include 'menu.php';?>
+            
+            <h1>Welcome to the Online Grocery Store!</h1>
         </header>
         <main id="container">
             <?php 
@@ -19,10 +21,14 @@
             for($x=0; $x<$arrlength; $x++)
             {
                 if($x % 3 == 0)
-                   $salesArray1[$salesIndex] = $listings[$x];
+                {
+                    $salesArray1[$salesIndex] = $listings[$x];
+                }
                 else if ($x % 3 == 1)
+                {
                     $salesArray2[$salesIndex] = $listings[$x]; 
-                else //if $x %3 == 2
+                }
+                else #if $x %3 == 2
                 {
                     $salesArray3[$salesIndex] = $listings[$x];
                     $salesIndex++;
