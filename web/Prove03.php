@@ -39,20 +39,20 @@
                     echo '<div id="left" class="column">';
                     for($x=0; $x<count($salesArray1); $x++)
                     {
-                        echo $salesArray1[$x];
+                        echo "<input type='submit' name='$salesArray1[$x]' value='$salesArray1[$x]'>";
                         echo "<br>";
-                        echo "<input type='submit' name='1-$x' value='1-$x'> $salesArray1[$x] </input>";
+                        
                     }
                     echo '</div><div id="middle" class="column">';
                     for($x=0; $x<count($salesArray2); $x++)
                     {
-                        echo $salesArray2[$x];
+                        echo "<input type='submit' name='$salesArray2[$x]' value='$salesArray2[$x]'>";
                         echo "<br>";
                     }
                     echo '</div><div id="right" class="column">';
                     for($x=0; $x<count($salesArray3); $x++)
                     {
-                        echo $salesArray3[$x];
+                        echo "<input type='submit' name='$salesArray3[$x]' value='$salesArray3[$x]'>";
                         echo "<br>";
                     }
                     echo '</div>';
