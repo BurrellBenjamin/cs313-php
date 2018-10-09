@@ -16,7 +16,9 @@
                 <?php
                     require 'cart.php';
                 for($x = 0; $x < $_SESSION["cartSize"]; $x++)
-                    echo "<li>$_SESSION['cart'][$x]</li>";
+                {
+                    echo '<li>$_SESSION["cart"][$x]</li>';
+                }
                     ?>
             </ul>
         </main>
