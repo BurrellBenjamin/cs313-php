@@ -8,8 +8,7 @@ body {
 }
 #productTable:after{
     content: "";
-    display: table;
-    clear: both;    
+    display: table;    
 }
 #dusclops {
     float: right;
