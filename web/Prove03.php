@@ -11,7 +11,7 @@
             <h1>Welcome to the Online Grocery Store!</h1>
         </header>
         <main>
-            <div  id="container">
+            <div  id="productTable">
                 <?php 
                 #require 'cart.php';
                 require 'listings.php';
@@ -35,19 +35,19 @@
                         $salesIndex++;
                     }
                 }
-                echo '<div id="left">';
+                echo '<div id="left" class="column">';
                 for($x=0; $x<count($salesArray1); $x++)
                 {
                     echo $salesArray1[$x];
                     echo "<br>";
                 }
-                echo '</div><div id="middle">';
+                echo '</div><div id="middle" class="column">';
                 for($x=0; $x<count($salesArray2); $x++)
                 {
                     echo $salesArray2[$x];
                     echo "<br>";
                 }
-                echo '</div><div id="right">';
+                echo '</div><div id="right" class="column">';
                 for($x=0; $x<count($salesArray3); $x++)
                 {
                     echo $salesArray3[$x];

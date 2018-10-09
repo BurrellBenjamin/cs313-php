@@ -31,17 +31,14 @@ iframe{
     margin-right: auto;
     width:50%;
 }
-#left{
+.column{
     float:left;
-    position: relative;
-    left:0;
-    width: 33%;
-    height: auto
+    width:33.33%;
+    padding:10px;
 }
-#right{
-    float:right;
-    position:relative;
-    right:0;
-    width:33%;
-    height:auto;
+.productTable:after{
+    content: "";
+    display: table;
+    clear: both;
+    
 }
