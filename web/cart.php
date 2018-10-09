@@ -27,6 +27,7 @@ function addItems($itemIndex)
 
 function removeItems($cartIndex)
 {
+    echo $cartIndex;
     if($cartIndex < $_SESSION["cartSize"] -1)
     {
         for($x=$cartIndex; $x < $_SESSION["cartSize"] -1; $x++)
