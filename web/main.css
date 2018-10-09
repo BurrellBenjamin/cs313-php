@@ -34,12 +34,14 @@ iframe{
 #left{
     float:left;
     position: relative;
+    left:0;
     width: 33%;
     height: auto
 }
 #right{
     float:right;
     position:relative;
+    right:0;
     width:33%;
     height:auto;
 }
