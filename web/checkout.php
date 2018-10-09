@@ -19,9 +19,9 @@
                         for($x = 0; $x < $_SESSION["cartSize"]; $x++)
                         {
                             echo "<li>";
+                            echo "<input type='submit' name='remove' value='";
                             echo $_SESSION["cart"][$x];
-                            echo "<input type='submit' name='remove' value=$x>";
-                            echo "</li>";
+                            echo "'></li>";
                         }
                     ?>
                 </ul>
