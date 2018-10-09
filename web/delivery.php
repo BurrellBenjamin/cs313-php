@@ -32,7 +32,7 @@ session_start();
                     return $data;
                 }
             ?>
-            <form method="post" action="confirmation.php">
+            <form method="post" action="confirm.php">
                 <label>Street Address</label>
                 <input type="text" name="street"><br>
                 <label>Unit #</label>
