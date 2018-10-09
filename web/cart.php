@@ -1,4 +1,5 @@
 <?php
+start_session();
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
     foreach($_POST as $x => $x_val)
