@@ -5,6 +5,8 @@
     <body>
         <header><?php include 'menu.php'?></header>
         <h1>Assignments</h1>
-        <p>Coming Soon!</p>
+        <ul>
+            <li><a href="Prove03.php">Prove 03-Shopping Cart</a></li>
+        </ul>
     </body>
 </html>
