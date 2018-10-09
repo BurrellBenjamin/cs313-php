@@ -23,6 +23,7 @@
                 }
                     ?>
             </ul>
+            <a href="Prove03.php">Add More to Cart</a> - - <a href="delivery.php">Finish Checking Out</a>
         </main>
     </body>
 </html>
