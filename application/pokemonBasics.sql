@@ -19,6 +19,8 @@ create type stat as enum ('hp', 'attack', 'defense', 'sp. attack', 'sp. defense'
 
 create type style as enum ('Physical', 'Special', 'Status');
 
+create type tier as enum ('T1', 'T2', 'T3', 'T4');
+
 create table pokemon_table (
 	index int,
 	name varchar(80) unique,--Species name
@@ -33,6 +35,7 @@ create table pokemon_table (
 	spattack int, 			--Base Sp. Attack stat
 	spdefense int, 			--Base Sp. Defense stat
 	speed int,				--Base Speed stat
+	tier tier,				--Pokemon's Tier ranking, based on viability
 	primary key (index, name)
 );
 
