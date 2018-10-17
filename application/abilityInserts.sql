@@ -310,3 +310,7 @@ insert into ability_table
 insert into ability_table 
 	(index, name, detail)
 	values (nextval('s_abilities'), 'Power Construct', 'If Zygarde 10% or 50% has 1/2 or lower at the end of the turn, it changes to Complete Forme.');
+
+insert into ability_table 
+	(index, name, detail)
+	values (nextval('s_abilities'), 'Contrary', 'If this Pokemon would normally have a stat stage raised, it is lowered instead, and vice versa.');

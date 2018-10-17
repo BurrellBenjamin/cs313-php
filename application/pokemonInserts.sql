@@ -177,3 +177,6 @@ insert into pokemon_table (index, name, typing1, typing2, ability1, ability2, hi
 
 insert into pokemon_table (index, name, typing1, typing2, ability1, ability2, hiddenability, hp, attack, defense, spattack, spdefense, speed, tier)
 	values (nextval('s_pokemon'), 'Zygarde-50%', 'ground', 'dragon', 'Aura Break', 'Aura Break', 'Power Construct', 108, 100, 121, 81, 95, 95, 'T1');
+
+insert into pokemon_table (index, name, typing1, typing2, ability1, ability2, hiddenability, hp, attack, defense, spattack, spdefense, speed, tier)
+	values (nextval('s_pokemon'), 'Serperior', 'grass', 'none', 'Overgrow', 'Overgrow', 'Contrary', 75, 75, 95, 75, 95, 113, 'T1');
