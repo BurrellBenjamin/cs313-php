@@ -5,7 +5,7 @@ insert into move_table
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Psychic', 'psychic', 'Special', 90, 100, '10% chance to lower the target''s Special Defense by 1 stage', '{1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1019, 1020, 1022, 1023, 1024, 1029, 1030, 1031, 1032, 1033, 1036, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058}');
+	values (nextval('s_moves'), 'Psychic', 'psychic', 'Special', 90, 100, '10% chance to lower the target''s Special Defense by 1 stage', '{1000, 1003, 1007, 1008, 1013, 1019, 1020, 1022, 1023, 1024, 1029, 1030, 1031, 1032, 1033, 1036, 1038, 1042, 1048, 1049, 1050, 1051, 1055}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
