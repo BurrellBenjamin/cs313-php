@@ -32,6 +32,7 @@
                     
                 }
                 catch(PDOException $ex){
+                    ini_set('display errors', 1);
                     echo "Error!: " . $ex->getMessage();
                     die();
                 }
