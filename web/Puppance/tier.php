@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Puppance Strategy Pokedex - <?php echo htmlspecialchars($_GET["id"]); ?></title>
+        <title>Puppance Strategy Pokedex - <?php echo htmlspecialchars($_GET['id']); ?></title>
         <link rel="stylesheet" type="text/css" href="puppance.css">
         <meta charset="utf-8">
     </head>
