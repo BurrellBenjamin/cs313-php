@@ -24,19 +24,20 @@
 
                     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     
-                    echo "<h1>" . htmlspecialchars($_GET["id"]) . "</h1><br><br><hr>Typing \t|Category| BP | Accuracy<hr>";
+                    echo "<h1>" . htmlspecialchars($_GET["id"]) . "</h1><br><br><table id = 'movedetail'> <tr><th>Type</tt><th>Category</th><th>Base Power</th><th>Accuracy</th></tr>";
                     
                     foreach($db->query("select * from move_table where name = '" . htmlspecialchars($_GET["id"]) . "'") as $row){
-                        echo "<a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a>" . "\t| " . $row['style'] . "\t| " . $row['power'] . "\t| " . $row['accuracy'] . "<hr>" . $row['detail'] . "<hr><br><br>";
+                        echo "<tr><td><a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a></td><td>" . $row['style'] . "</td><td>" . $row['power'] . "</td><td> " . $row['accuracy'] . "</td></tr></table>" . $row['detail'] . "<hr><br><br>";
                     }
                     
-                    echo "<h3>Pokemon who learn this move</h3><hr>";
+                    echo "<h3>Pokemon who learn this move</h3><table id = 'pokemondetail'><tr><th>Pokemon</th><th>Type</th><th>Abilities</th><th>Tier</th></tr>";
                     foreach($db->query("select * from pokemon_table as p where exists (select * from move_table as m where m.name = '" . htmlspecialchars($_GET["id"]) . "' and	p.index = any(learnedby)) order by name") as $row){
-                        echo "<a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a>\t | <a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>";
+                        echo "<tr><td><a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a></td><td><a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>";
                         if($row['typing2'] != 'none')
                             echo " / <a href='type.php?id=" .$row['typing2'] . "'>" . $row['typing2'] . "</a>";
-                        echo "\t\t|<a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a>\t| <a href='tier.php?id-" . $row['tier'] . "'>" . $row['tier'] . "</a><hr>";
+                        echo "</td><td><a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a></td><td <a href='tier.php?id-" . $row['tier'] . "'>" . $row['tier'] . "</a></td></tr>";
                     }
+                    echo "</table>"
                 }
                 catch(PDOException $ex){
                     echo "Error!: " . $ex->getMessage();
