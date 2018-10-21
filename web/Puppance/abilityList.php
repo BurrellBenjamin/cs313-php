@@ -6,7 +6,7 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <header><?php include 'header.php'?></header>
+        <header><?php include 'header.php'; ?></header>
         <main>
             <?php
                 try{
@@ -27,7 +27,7 @@
                     echo "<h1>Abilities</h1><hr>";
                     
                     foreach($db->query("select * from ability_table order by name") as $row){
-                        echo "<a href='ability.php?id=" . $row['name'] . ">" . $row['name'] . "</a>\t| " . $row['detail'] . "<hr>";
+                        echo "<a href='ability.php?id=" . $row['name'] . "'>" . $row['name'] . "</a>\t| " . $row['detail'] . "<hr>";
                     }
                     
                 }

@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-        <header><?php include 'header.php'?></header>
+        <header><?php include 'header.php'; ?></header>
 		<main>
             <p>Welcome to Puppance, the go-to resource for Competitive Pokemon
             Draft League play. The sets provided here are specifically tailored
