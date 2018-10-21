@@ -50,15 +50,15 @@
                             echo $row['attack'] . " Atk /";
                         if($row['defense'] != 0 && ($row['spattack'] != 0 || $row['spdefense'] != 0 || $row['speed'] != 0))
                             echo $row['defense'] . " Def /";
-                        else
+                        else if ($row['defense'] != 0)
                            echo $row['defense'] . " Def";
                         if($row['spattack'] != 0 && ($row['spdefense'] != 0 || $row['speed'] != 0))
                             echo $row['spattack'] . " SpAtk /";
-                        else
+                        else if ($row['spattack'] != 0)
                            echo $row['spattack'] . " SpAtk";
                         if($row['spdefense'] != 0 && $row['speed'] != 0)
                             echo $row['spdefense'] . " SpDef /";
-                        else
+                        else if ($row['spdefense'] != 0)
                            echo $row['spdefense'] . " SpDef";
                         if($row['speed'] != 0)
                             echo $row['speed'] . " Spe";
