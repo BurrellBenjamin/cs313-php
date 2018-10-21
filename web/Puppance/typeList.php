@@ -26,9 +26,12 @@
                     
                     echo "<h1>Types</h1><hr>";
                     
-                    $x = 0;
                     foreach($db->query("select * from enum_range('fairy'::typing, 'normal'::typing)") as $row){
-                        echo "<a href='type.php?id=" .  $row[$x] . "'>" . $row[$x] . "</a><hr>";
+                        $typelist = array_values($row);
+                        for($x = 0; $x < $typelist.count(); $x++){
+                            echo "<a href='type.php?id=" .  $typelist[$x] . "'>" . $typelist[$x] . "</a><hr>";
+                        }
+                        
                     }
                     
                 }

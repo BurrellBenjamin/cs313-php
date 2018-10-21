@@ -26,10 +26,11 @@
                     
                     echo "<h1>Tiers of Viability</h1><hr>";
                     
-                    $x = 0;
                     foreach($db->query("select * from enum_range('T1'::tier, 'T4'::tier)") as $row){
-                        echo "<a href='tier.php?id=" . $row[$x] . "'>" . $row[$x] . "</a><hr>";
-                        $x++;
+                        $tierlist = array_values($row);
+                        for($x = 0; $x < $tierlist.count(); $x++){
+                            echo "<a href='tier.php?id=" . $row[$x] . "'>" . $row[$x] . "</a><hr>";
+                        }
                     }
                 }
                 catch(PDOException $ex){
