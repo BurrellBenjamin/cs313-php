@@ -27,7 +27,7 @@
                     echo "<h1>Tiers of Viability</h1><hr>";
                     
                     foreach($db->query("select * from unnest(enum_range('T1'::tier, 'T4'::tier))") as $row){
-                        echo "<a href='tier.php?id=" . $row['enum_range'] . "'>" . $row['enum_range'] . "</a><hr>";
+                        echo "<a href='tier.php?id=" . $row['unnest'] . "'>" . $row['unnest'] . "</a><hr>";
                         
                     }
                 }
