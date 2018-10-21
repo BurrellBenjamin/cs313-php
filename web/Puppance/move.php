@@ -32,12 +32,10 @@
                     
                     echo "<h3>Pokemon who learn this move<h3><hr>";
                     foreach($db->query("select * from pokemon_table  as p from pokemon_table as p where exists (select * from move_table as m where m.name = '" . echo htmlspecialchars($_GET["id"]) . "' and	p.index = any(learnedby)) order by name") as $row){
-                        echo "<a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a>\t| <a href='type.php?id=" . $row['typing1']  . ">" . $row['typing1'] . "</a>";
+                        echo "<a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a>\t | <a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>";
                         if($row['typing2'] != 'none')
-                            echo " / <a href='type.php?id=" .$row['typing2'] . ">" . $row['typing2'] . "</a>";
-                        else
-                            echo "\t\t| ";
-                        echo "<a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a>\t| <a href='tier.php?id-" . $row['tier'] . "'>" . $row['tier'] . "</a><br>";
+                            echo " / <a href='type.php?id=" .$row['typing2'] . "'>" . $row['typing2'] . "</a>";
+                        echo "\t\t|<a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a>\t| <a href='tier.php?id-" . $row['tier'] . "'>" . $row['tier'] . "</a><br>";
                     }
                 }
                 catch(PDOException $ex){
