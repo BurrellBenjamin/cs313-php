@@ -28,8 +28,7 @@
                     
                     foreach($db->query("select * from enum_range('T1'::tier, 'T4'::tier)") as $row){
                         $tierlist = array_values($row);
-                        echo $tierlist.count();
-                        for($x = 0; $x < $tierlist.count(); $x++){
+                        for($x = 0; $x < count($tierlist); $x++){
                             echo "<a href='tier.php?id=" . $tierlist[$x] . "'>" . $tierlist[$x] . "</a><hr>";
                         }
                     }
