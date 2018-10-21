@@ -28,9 +28,10 @@
                     
                     foreach($db->query("select * from enum_range('fairy'::typing, 'normal'::typing)") as $row){
                         $typelist = array_values($row);
-                        for($x = 0; $x < count($typelist); $x++){
+                        print_r($typelist);
+                        /*for($x = 0; $x < count($typelist); $x++){
                             echo "<a href='type.php?id=" .  $typelist[$x] . "'>" . $typelist[$x] . "</a><hr>";
-                        }
+                        }*/
                         
                     }
                     
