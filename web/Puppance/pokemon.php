@@ -75,7 +75,7 @@
                     echo "Error!: " . $ex->getMessage();
                     die();
                 }
-                    
+                ?>    
         </main>
     </body>
 </html>
