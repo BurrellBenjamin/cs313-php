@@ -25,7 +25,7 @@
 
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                echo '<h1>Puppance Strategy Pokedex</h1>';
+                echo '';
 
                 if (isset($_POST['name'])) {
                     foreach ($db->query("select * from scriptures where book like '%" . htmlspecialchars($_POST['book']) . "%'") as $row) {
@@ -34,6 +34,10 @@
                     }
                   }
             ?>
+            
+            <h1>Puppance Strategy Pokedex</h1>
+            <hr>
+            
             <p>Welcome to Puppance, the go-to resource for Competitive Pokemon
             Draft League play. The sets provided here are specifically tailored
             for the unique environment of Draft League play. Many of these sets
@@ -41,10 +45,10 @@
             match, so these sets may perform suboptimally in normal ladder play.</p>
             
             <?php
-                echo "<form action='pokemon.php?id=" . htmlspecialchars($_GET['name']) . "' method='get'>";
+                echo "<form action='pokemon.php?id=" . htmlspecialchars($_GET['id']) . "' method='get'>";
             ?>
                 <label>Search Puppance by Pokemon: </label>
-                <input type="text" name="name"><br>
+                <input type="text" name="id"><br>
                 <input type="submit">
             </form>
         </main>
