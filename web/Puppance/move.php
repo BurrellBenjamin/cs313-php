@@ -24,7 +24,7 @@
 
                     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     
-                    echo "<h1>" . htmlspecialchars($_GET["id"]) . "</h1><br><br><hr>";
+                    echo "<h1>" . htmlspecialchars($_GET["id"]) . "</h1><br><br><hr>Typing \t|Category| BP | Accuracy<hr>";
                     
                     foreach($db->query("select * from move_table where name = '" . htmlspecialchars($_GET["id"]) . "'") as $row){
                         echo "<a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a>" . "\t| " . $row['style'] . "\t| " . $row['power'] . "\t| " . $row['accuracy'] . "<hr>" . $row['detail'] . "<hr><br><br>";
