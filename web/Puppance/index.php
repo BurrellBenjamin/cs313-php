@@ -40,7 +40,7 @@
             match, so these sets may perform suboptimally in normal ladder play.</p>
             
             <?php
-                echo "<form action='pokemon.php?id=" . htmlspecialchars($_POST['name']) . "' method='post'>")
+                echo "<form action='pokemon.php?id=" . htmlspecialchars($_POST['name']) . "' method='post'>";
             ?>
                 <label>Search Puppance by Pokemon: </label>
                 <input type="text" name="name"><br>
