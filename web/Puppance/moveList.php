@@ -27,7 +27,7 @@
                     echo "<h1>Moves</h1><hr>";
                     
                     foreach($db->query("select * from move_table order by name") as $row){
-                        echo "<a href='move.php?id=" .  $row['name'] . "'>" . $row['name'] . "</a>\t| <a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a>" . "\t| " . $row['style'] . "\t| " . $row['power'] . "\t| " . $row['accuracy'] . "\t| " . $row['detail'];
+                        echo "<a href='move.php?id=" .  $row['name'] . "'>" . $row['name'] . "</a>\t| <a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a>" . "\t| " . $row['style'] . "\t| " . $row['power'] . "\t| " . $row['accuracy'] . "\t| " . $row['detail'] . "<br>";
                     }
                     
                 }
