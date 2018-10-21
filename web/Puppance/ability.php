@@ -25,7 +25,7 @@
                     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     echo "<h1>" . htmlspecialchars($_GET["id"]) . "</h1><br><br><hr>";
                     
-                    foreach($db->query("select * from ability_table where name = '%" . htmlspecialchars($_GET["id"]) . "%'") as $row){
+                    foreach($db->query("select * from ability_table where name = '" . htmlspecialchars($_GET["id"]) . "'") as $row){
                         echo $row['detail'] . "<hr><br><br>";
                     }
                     
