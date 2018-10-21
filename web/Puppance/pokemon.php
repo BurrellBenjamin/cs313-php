@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
     </head>
     <body>
-        <header><?php include 'header.php'?></header>
+        <header><?php include 'header.php';?></header>
         <main>
             <?php
                 try
