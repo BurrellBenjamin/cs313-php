@@ -32,7 +32,6 @@
                             echo "<a href='type.php?id=" .  $typelist[$x] . "'>" . $typelist[$x] . "</a><hr>";
                         }*/
                         
-                    }
                     
                 }
                 catch(PDOException $ex){
