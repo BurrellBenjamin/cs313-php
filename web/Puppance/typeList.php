@@ -26,12 +26,9 @@
                     
                     echo "<h1>Types</h1><hr>";
                     
-                    $typelist = $db->query("select * from enum_range('fairy'::typing, 'normal'::typing)");
-                        print_r($typelist);
-                        /*for($x = 0; $x < count($typelist); $x++){
-                            echo "<a href='type.php?id=" .  $typelist[$x] . "'>" . $typelist[$x] . "</a><hr>";
-                        }*/
-                        
+                    foreach($db->query("select * from unnest(enum_range('fairy'::typing, 'normal'::typing))") as $row){
+                        echo "<a href='type.php?id=" .  $row[$'unnest'] . "'>" . $row['unnest'] . "</a><hr>";
+                    }
                     
                 }
                 catch(PDOException $ex){
