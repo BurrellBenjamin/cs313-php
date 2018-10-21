@@ -31,7 +31,7 @@
                     }
                     
                     echo "<h3>Pokemon who learn this move<h3><hr>";
-                    foreach($db->query("select * from pokemon_table  as p from pokemon_table as p where exists (select * from move_table as m where m.name = '" . echo htmlspecialchars($_GET["id"]) . "' and	p.index = any(learnedby)) order by name") as $row){
+                    foreach($db->query("select * from pokemon_table  as p from pokemon_table as p where exists (select * from move_table as m where m.name = '" . htmlspecialchars($_GET["id"]) . "' and	p.index = any(learnedby)) order by name") as $row){
                         echo "<a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a>\t | <a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>";
                         if($row['typing2'] != 'none')
                             echo " / <a href='type.php?id=" .$row['typing2'] . "'>" . $row['typing2'] . "</a>";
