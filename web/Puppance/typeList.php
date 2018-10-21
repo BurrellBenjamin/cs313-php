@@ -26,7 +26,7 @@
                     
                     echo "<h1>Types</h1><hr>";
                     
-                    foreach($db->query("select * from enum_range('fairy'::typing, 'normal'::typing)") as $row){
+                    foreach($db->query("select * from unnest(enum_range('fairy'::typing, 'normal'::typing))") as $row){
                         $typelist = array_values($row);
                         print_r($typelist);
                         /*for($x = 0; $x < count($typelist); $x++){
