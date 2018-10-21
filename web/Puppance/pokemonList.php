@@ -29,7 +29,7 @@
                     foreach($db->query("select * from pokemon_table order by name") as $row){
                         echo "<a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a>\t | <a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>";
                         if($row['typing2'] != 'none')
-                            echo " / <a href='type.php?id=" .$row['typing2'] . ">" . $row['typing2'] . "</a>";
+                            echo " / <a href='type.php?id=" .$row['typing2'] . "'>" . $row['typing2'] . "</a>";
                         echo "\t\t| <a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a>\t| <a href='tier.php?id-" . $row['tier'] . "'>" . $row['tier'] . "</a><br>";
                     }
                 }
