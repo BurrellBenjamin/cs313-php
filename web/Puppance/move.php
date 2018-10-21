@@ -30,7 +30,7 @@
                         echo "<a href='type.php?id=" . $row['typing']  . ">" . $row['typing'] . "</a>" . "\t| " . $row['style'] . "\t| " . $row['power'] . "\t| " . $row['accuracy'] . "<hr>" . $row['detail'] . "<hr><br><br>";
                     }
                     
-                    echo "<h3>Pokemon who learn this move<h3><hr>";
+                    echo "<h3>Pokemon who learn this move</h3><hr>";
                     foreach($db->query("select * from pokemon_table as p where exists (select * from move_table as m where m.name = '" . htmlspecialchars($_GET["id"]) . "' and	p.index = any(learnedby)) order by name") as $row){
                         echo "<a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a>\t | <a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>";
                         if($row['typing2'] != 'none')
