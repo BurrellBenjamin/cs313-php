@@ -26,7 +26,7 @@
                     
                     echo "<h1>Types</h1><hr>";
                     
-                    $typelist = array_values($db->query("select * from enum_range('fairy'::typing, 'normal'::typing)"));
+                    $typelist = $db->query("select * from enum_range('fairy'::typing, 'normal'::typing)");
                         print_r($typelist);
                         /*for($x = 0; $x < count($typelist); $x++){
                             echo "<a href='type.php?id=" .  $typelist[$x] . "'>" . $typelist[$x] . "</a><hr>";
