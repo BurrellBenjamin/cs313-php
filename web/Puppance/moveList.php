@@ -32,7 +32,7 @@
                             echo "| " . $row['power'];
                         else
                             echo "| --";
-                        echo "\t| " . $row['accuracy'] . "\t| " . $row['detail'] . "<br>";
+                        echo "\t| " . $row['accuracy'] . "\t| " . $row['detail'] . "<hr>";
                     }
                     
                 }
