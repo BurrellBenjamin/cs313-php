@@ -14,7 +14,7 @@
             depend on being able to know your opponent's roster before the
             match, so these sets may perform suboptimally in normal ladder play.</p>
             
-            <form action="pokemon.php" method="post">
+            <form action="pokemon.php" method="get">
                 <label>Search Puppance by Pokemon: </label>
                 <input type="text" name="name"><br>
                 <input type="submit">
