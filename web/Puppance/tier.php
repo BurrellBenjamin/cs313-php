@@ -25,7 +25,7 @@
                     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     
                     echo "<h1>" . htmlspecialchars($_GET["id"]) . "</h1><hr><br><br><br>Pokemon in this tier<hr>";
-                    foreach($db->query("select * from pokemon_table where tier = '%" . htmlspecialchars($_GET["id"]) . "%' order by name") as $row){
+                    foreach($db->query("select * from pokemon_table where tier = '" . htmlspecialchars($_GET["id"]) . "' order by name") as $row){
                         echo "<a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a>\t| <a href='type.php?id=" . $row['typing1']  . ">" . $row['typing1'] . "</a>";
                         if($row['typing2'] != 'none')
                             echo " / <a href='type.php?id=" .$row['typing2'] . ">" . $row['typing2'] . "</a>";

@@ -31,7 +31,7 @@
                     
                     $pokeIndex;
                     
-                    foreach($db->query("select * from pokemon_table where name = '%" . htmlspecialchars($_GET["id"]) . "%'") as $row){
+                    foreach($db->query("select * from pokemon_table where name = '" . htmlspecialchars($_GET["id"]) . "'") as $row){
                         echo "Type: <a href='type.php?id=" . $row['typing1']  . ">" . $row['typing1'] . "</a>"; 
                         if($row['typing2'] != 'none')
                             echo " / <a href='type.php?id=" .$row['typing2'] . ">" . $row['typing2'] . "</a>";
@@ -42,7 +42,7 @@
                     
                     //display sets
                     echo "<h2>Strategies:<h2>";
-                    foreach($db->query("select * from set_table where pokemon = '%" . htmlspecialchars($_GET["id"]) . "%' order by index") as $row){
+                    foreach($db->query("select * from set_table where pokemon = '" . htmlspecialchars($_GET["id"]) . "' order by index") as $row){
                         echo "<h3>" . $row['name'] . "</h3><div class='details'>Move 1:\t <a href='move.php?id=" . $row['move1'] . "'>" . $row['move1'] . ",/a.<br>Move 2:\t <a href='move.php?id=" . $row['move2'] . "'>" . $row['move2'] . "</a><br>Move 3:\t<a href='move.php?id=" . $row['move3'] . "'>" . $row['move3'] . "<br>Move 4:\t<a href='move.php?id=" . $row['move4'] . "'>" . $row['move4'] . "<br>Item:\t<a href='item.php?id=" . $row['item'] . "'>" . $row['item'] . "</a><br>Ability:\t<a href='ability.php?id=" . $row['ability'] . "'>" . $row['ability'] . "</a><br>Nature:\t" . $row['nature'] . "<br>EVs:\t";
                         if($row['hp'] != 0)
                             echo $row['hp'] . " HP /";
