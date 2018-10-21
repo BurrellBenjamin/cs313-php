@@ -10,6 +10,6 @@ select p.name, p.typing1, p.typing2
 	(
 		select * 
 		from move_table as m
-		where m.name = 'Psychic' and
+		where m.name = <move name> and
 		p.index = any(learnedby)
 	);
