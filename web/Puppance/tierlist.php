@@ -27,9 +27,9 @@
                     echo "<h1>Tiers of Viability</h1><hr>";
                     
                     $x = 0;
-                    foreach($db->query("select * from unnest(enum_range('T1'::tier, null))") as $row){
+                    foreach($db->query("select * from unnest(enum_range('T1'::tier, 'T4'::tier))") as $row){
                         echo "<a href='tier.php?id=" . $row[$x] . "'>" . $row . "</a><hr>";
-                        $x++
+                        $x++;
                     }
                 }
                 catch(PDOException $ex){

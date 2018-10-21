@@ -27,7 +27,7 @@
                     echo "<h1>Types</h1><hr>";
                     
                     $x = 0;
-                    foreach($db->query("select * from unnest(enum_range('fairy'::typing, null))") as $row){
+                    foreach($db->query("select * from unnest(enum_range('fairy'::typing, 'normal'::typing))") as $row){
                         echo "<a href='type.php?id=" .  $row[$x] . "'>" . $row[$x] . "</a><hr>";
                         $x++;
                     }
