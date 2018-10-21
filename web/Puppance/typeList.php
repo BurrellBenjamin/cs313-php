@@ -26,7 +26,7 @@
                     
                     echo "<h1>Types</h1><hr>";
                     
-                    foreach(db->query("select unnest(enum_range(null::typing))::text") as $row){
+                    foreach(db->query("select unnest(enum_range(null::typing))") as $row){
                         echo "<a href='type.php?id=" $row . "'>" . $row . "</a><hr>";
                     }
                     
