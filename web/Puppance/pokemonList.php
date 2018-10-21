@@ -28,7 +28,7 @@
                     
                     foreach($db->query("select * from pokemon_table order by name") as $row){
                         echo "<a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a>\t| <a href='type.php?id=" . $row['typing1']  . ">" . $row['typing1'] . "</a>";
-                        if($row['typing2'] != null)
+                        if($row['typing2'] != 'none')
                             echo " / <a href='type.php?id=" .$row['typing2'] . ">" . $row['typing2'] . "</a>";
                         else
                             echo "\t\t| ";
