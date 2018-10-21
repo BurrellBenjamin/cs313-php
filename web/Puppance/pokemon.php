@@ -35,7 +35,7 @@
                         echo "Type: <a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>"; 
                         if($row['typing2'] != 'none')
                             echo " / <a href='type.php?id=" .$row['typing2'] . ">" . $row['typing2'] . "</a>";
-                        echo "<br><br>Abilities: <a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a><br><br> Tier: <a href='tier.php?id=" . $row['tier'] . "'>" . $row['tier'] . "</a><br><br> HP:\t" . $row['hp'] . "<br>Attack:\t" . $row['attack'] . "<br>Defense:\t" . $row['defense'] . "<br>Sp. Atk:\t" . $row['spattacl'] . "<br>Sp. Def:\t" . $row['spdefense'] . "<br>Speed:\t" . $row['speed'] . "<br><hr>";
+                        echo "<br><br>Abilities: <a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a><br><br> Tier: <a href='tier.php?id=" . $row['tier'] . "'>" . $row['tier'] . "</a><br><br> HP:\t" . $row['hp'] . "<br>Attack:\t" . $row['attack'] . "<br>Defense:\t" . $row['defense'] . "<br>Sp. Atk:\t" . $row['spattack'] . "<br>Sp. Def:\t" . $row['spdefense'] . "<br>Speed:\t" . $row['speed'] . "<br><hr>";
                         $pokeIndex = $row['index']; //save this for later
                         
                     }
