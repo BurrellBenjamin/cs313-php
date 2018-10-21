@@ -30,7 +30,7 @@
                         echo $row['detail'] . "<hr><br><br>";
                     }
                     
-                    echo "<h3>Pokemon who use this item<h3><hr>";
+                    echo "<h3>Pokemon who use this item</h3><hr>";
                     foreach($db->query("select * from pokemon_table  as p, set_table as s where p.name = s.pokemon and s.item = '" . htmlspecialchars($_GET["id"]) . "' order by p.name") as $row){
                         echo "<a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a>\t | <a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>";
                         if($row['typing2'] != 'none')
