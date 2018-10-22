@@ -27,7 +27,7 @@
                     echo "<h1>" . htmlspecialchars($_GET["id"]) . "</h1><br><br><table id = 'movedetail'> <tr><th>Type</tt><th>Category</th><th>Base Power</th><th>Accuracy</th></tr>";
                     
                     foreach($db->query("select * from move_table where name = '" . htmlspecialchars($_GET["id"]) . "'") as $row){
-                        echo "<tr><td><a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a></td><td>" . $row['style'] . "</td><td>" . $row['power'] . "</td><td> " . $row['accuracy'] . "</td></tr></table>" . $row['detail'] . "<hr><br><br>";
+                        echo "<tr><td><a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a></td><td>" . $row['style'] . "</td><td>" . $row['power'] . "</td><td> " . $row['accuracy'] . "</td></tr></table><hr>" . $row['detail'] . "<hr><br><br>";
                     }
                     
                     echo "<h3>Pokemon who learn this move</h3><table id = 'pokemondetail'><tr><th>Pokemon</th><th>Type</th><th>Abilities</th><th>Tier</th></tr>";

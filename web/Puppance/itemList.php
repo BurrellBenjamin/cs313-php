@@ -24,10 +24,11 @@
 
                     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     
-                    echo "<h1>Items</h1><hr>";
+                    echo "<h1>Items</h1><hr><table id='itemdetail'><tr><th>Item</th><th>Details</th></tr>";
                     foreach($db->query("select * from item_table order by name") as $row){
-                        echo "<a href='item.php?id=" . $row['name'] . "'>" . $row['name'] . "</a>\t| " . $row['detail'] . "<hr>";
+                        echo "<tr><td><a href='item.php?id=" . $row['name'] . "'>" . $row['name'] . "</a></td><td>" . $row['detail'] . "</td></tr>";
                     }
+                    echo "</table>"
                 }
                 catch(PDOException $ex){
                     echo "Error!: " . $ex->getMessage();
