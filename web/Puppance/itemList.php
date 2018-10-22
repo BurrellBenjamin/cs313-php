@@ -28,7 +28,7 @@
                     foreach($db->query("select * from item_table order by name") as $row){
                         echo "<tr><td><a href='item.php?id=" . $row['name'] . "'>" . $row['name'] . "</a></td><td>" . $row['detail'] . "</td></tr>";
                     }
-                    echo "</table>"
+                    echo "</table>";
                 }
                 catch(PDOException $ex){
                     echo "Error!: " . $ex->getMessage();

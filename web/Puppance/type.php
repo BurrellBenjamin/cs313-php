@@ -27,11 +27,11 @@
                     echo "<h1>" . htmlspecialchars($_GET["id"]) . " Type </h3><hr><br><br>";
                     
                     echo "<h3>Pokemon of this type</h3><hr><table id = 'pokemondetail'><tr><th>Pokemon</th><th>Type</th><th>Abilities</th><th>Tier</th></tr>";
-                    foreach($db->query("select * from pokemon_table as p where p.typing1 = '" . htmlspecialchars($_GET["id"]) . "' or p.typing2  '" . htmlspecialchars($_GET["id"]) . "' order by name") as $row){
+                    foreach($db->query("select * from pokemon_table where typing1 = '" . htmlspecialchars($_GET["id"]) . "' or typing2  '" . htmlspecialchars($_GET["id"]) . "' order by name") as $row){
                         echo "<tr><td><a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a></td><td><a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>";
                         if($row['typing2'] != 'none')
                             echo " / <a href='type.php?id=" .$row['typing2'] . "'>" . $row['typing2'] . "</a>";
-                        echo "</td><td><a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a></td><td <a href='tier.php?id-" . $row['tier'] . "'>" . $row['tier'] . "</a></td></tr>";
+                        echo "</td><td><a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a></td><td> <a href='tier.php?id-" . $row['tier'] . "'>" . $row['tier'] . "</a></td></tr>";
                     }
                     echo "</table>";
                     
