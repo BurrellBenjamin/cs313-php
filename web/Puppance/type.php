@@ -31,7 +31,7 @@
                         echo "<tr><td><a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a></td><td><a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>";
                         if($row['typing2'] != 'none')
                             echo " / <a href='type.php?id=" .$row['typing2'] . "'>" . $row['typing2'] . "</a>";
-                        echo "</td><td><a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a></td><td> <a href='tier.php?id-" . $row['tier'] . "'>" . $row['tier'] . "</a></td></tr>";
+                        echo "</td><td><a href='ability.php?id=" . $row['ability1'] . "'>" . $row['ability1'] . "</a>" . "\t| <a href='ability.php?id=" . $row['ability2'] . "'>" . $row['ability2'] . "</a>\t| <a href='ability.php?id=" . $row['hiddenability'] . "'>" . $row['hiddenability'] . "</a></td><td> <a href='tier.php?id=" . $row['tier'] . "'>" . $row['tier'] . "</a></td></tr>";
                     }
                     echo "</table>";
                     
