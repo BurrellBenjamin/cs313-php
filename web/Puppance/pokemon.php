@@ -67,15 +67,16 @@
                     }
                     
                     //display movepool                    
-                    echo "<h2>Moves:</h2><hr>";
+                    echo "<h2>Moves:</h2><hr><table id = 'movedetail'> <tr><th>Type</tt><th>Category</th><th>Base Power</th><th>Accuracy</th><th>Details</th></tr>";
                     foreach($db->query("select * from move_table where " . $pokeIndex . " = any(learnedby) order by name" ) as $row){
-                        echo "<a href='move.php?id=" .  $row['name'] . "'>" . $row['name'] . "</a>\t| <a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a>" . "\t| " . $row['style']. "\t";
+                       echo "<tr><td><a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a></td><td>" . $row['style'] . "</td><td>";
                         if($row['power'] != null)
-                            echo "| " . $row['power'];
+                            echo $row['power'];
                         else
-                            echo "| --";
-                        echo "\t| " . $row['accuracy'] . "\t| " . $row['detail'] . "<hr>";
+                            echo "--";
+                        echo "</td><td> " . $row['accuracy'] . "</td><td>" . $row['detail'] . "</td><tr>";
                     }
+                    echo "</table>";
                 }
                 catch(PDOException $ex){
                     echo "Error!: " . $ex->getMessage();
