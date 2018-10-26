@@ -1,7 +1,7 @@
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), '', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), '', '', '', , , '', '{1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
@@ -29,91 +29,91 @@ insert into move_table
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Dragon Pulse', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Dragon Pulse', 'dragon', 'Special', 85, 100, 'Deals damage.', '{1001, 1006, 1009, 1012, 1015, 1017, 1022, 1024, 1031, 1039, 1053, 1058, 1059}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Dragon Rush', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Dragon Rush', 'dragon', 'Physical', 100, 75, '20% chance to flinch the target.', '{1001, 1006, 1009, 1012, 1039}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Earthquake', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Earthquake', 'ground', 'Physical', 100, 100, 'Deals damage.', '{1001, 1004, 1005, 1006, 1009, 1010, 1011, 1012, 1015, 1017, 1018, 1023, 1024, 1027, 1030, 1031, 1033, 1035, 1039, 1041, 1042, 1044, 1053, 1054, 1058}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Fire Blast', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Fire Blast', 'fire', 'Special', 110, 85, 'Has a 10% chance to burn the target.', '{1001, 1003, 1005, 1006, 1007, 1009, 1011, 1012, 1015, 1017, 1028, 1031, 1039, 1042, 1053, 1055}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Flamethrower', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Flamethrower', 'fire', 'Special', 90, 100, 'Has a 10% chance to burn the target', '{1001, 1003, 1005, 1006, 1007, 1009, 1011, 1012, 1015, 1017, 1028, 1031, 1039, 1042, 1053, 1055}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Haze', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Haze', 'ice', 'Status', null, 100, 'Resets stat boost stages back to zero for both the user and the target. ', '{1001, 1009, 1014, 1046, 1052, 1058}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Heal Bell', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Heal Bell', 'normal', 'Status', null, 100, 'Every Pokemon in the user''s party is cured of its major status condition. Active Pokemon with the Soundproof Ability are not cured.', '{1001, 1007, 1008, 1009, 1013, 1023, 1025, 1026, 1031}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Heat Wave', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Heat Wave', 'fire', 'Special', 95, 90, 'Has a 10% chance to burn the target.', '{1001, 1003, 1006, 1009, 1017, 1031, 1033, 1039, 1043, 1051, 1055, 1057}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Hone Claws', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Hone Claws', 'dark', 'Status', null, 100, 'The user boosts their Attack and Accuracy by 1 stage each.', '{1001, 1006, 1009, 1010, 1012, 1016, 1022, 1024, 1030, 1031, 1032, 1038, 1039, 1053}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Hyper Voice', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Hyper Voice', 'normal', 'Special', 90, 100, 'Deals damage.', '{1001, 1002, 1007, 1011, 1013, 1022, 1025, 1031, 1033, 1039, 1047, 1058}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Ice Beam', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Ice Beam', 'ice', 'Special', 90, 100, 'Has a 10% chance to freeze the target.', '{1001, 1002, 1007, 1009, 1011, 1014, 1015, 1022, 1024, 1025, 1026, 1027, 1028, 1031, 1034, 1042, 1044, 1046, 1052, 1053, 1056}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Moonblast', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Moonblast', 'fairy', 'Special', 95, 100, 'Has a 10% chance to lower the target''s Special Attack by 1 stage.', '{1001, 1007, 1008, 1013, 1020, 1046, 1048}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Outrage', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Outrage', 'dragon', 'Physical', 120, 100, 'The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect.', '{1001, 1004, 1006, 1009, 1011, 1012, 1015, 1022, 1023, 1024, 1031, 1033, 1039, 1044, 1053, 1054, 1058, 1059}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Perish Song', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Perish Song', 'normal', 'Status', null, 100, 'Each active Pokemon receives a perish count of 4 if it doesn''t already have one already. At the end of each turn, the perish count lowers by 1. Pokemon will faint if their perish count reaches zero. The Perish count is removed from Pokemon that switch out.', '{1001, 1002}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Play Rough', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Play Rough', 'fairy', 'Physical', 90, 90, 'Has a 10% cnace to lower the target''s Attack by 1 stage.', '{1001, 1002, 1020, 1028, 1032}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Psych Up', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Psych Up', 'psychic', 'Status', null, 100, 'The  user copies all of the target''s current stat stage changes.', '{100, 1001, 1007, 1008, 1011, 1013, 1019, 1020, 1024, 1028, 1029, 1030, 1031, 1032, 1036, 1037, 1038, 1042, 1045, 1046, 1047, 1048}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Pursuit', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Pursuit', 'dark', 'Physical', 40, 100, 'If the target switches out this turn, this move will hit before it switches out, and will hit with doubled base power.', '{1001, 1018, 1030, 1034, 1040, 1041, 1043, 1053, 1056, 1059}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Refresh', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Refresh', 'normal', 'Status', null, 100, 'The user heals themself of Poison, Paralysis, or Burn.', '{1001, 1002, 1020, 1024, 1030, 1039, 1044, 1046}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Roar', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Roar', 'normal', 'Status', null, 100, 'The target is roced to switch out and be replaced with a random, unfainted ally.', '{1001, 1006, 1009, 1011, 1012, 1015, 1017, 1024, 1027, 1031, 1039, 1044, 1045, 1047, 1053, 1054, 1057}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Roost', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Roost', 'flying', 'Status', null, 100, 'The user recovers 1/2 of its maximum HP. The user also loses its ground immunity for the rest of the turn.', '{1001, 1004, 1006, 1009, 1016, 1022, 1024, 1031, 1034, 1039, 1040, 1043, 1047, 1055, 1057}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Solar Beam', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Solar Beam', 'grass', 'Special', 120, 100, 'This attack charges on the first turn and executes on the second. Power is halved in Hail, Rain Dance, or Sandstorm. If the weather is Sunny Day, this move has no charge turn.', '{1001, 1005, 1006, 1007, 1011, 1017, 1024, 1025, 1026, 1028, 1031, 1033, 1041, 1045, 1054, 1055, 1059}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)
-	values (nextval('s_moves'), 'Tailwind', '', '', , , '', '{1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059}');
+	values (nextval('s_moves'), 'Tailwind', 'flying', 'Status', null, 100, 'For 4 turns, the user and its party members have their speed doubled. Fails if this affect is already active for the user''s side.', '{1001, 1006, 1009, 1016, 1021, 1024, 1031, 1034, 1039, 1040, 1043, 1051, 1055, 1057}');
 
 insert into move_table 
 	(index, name, typing, style, power, accuracy, detail, learnedby)

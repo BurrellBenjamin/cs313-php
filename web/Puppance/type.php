@@ -35,15 +35,16 @@
                     }
                     echo "</table>";
                     
-                    echo "<hr><br><br><br><h3>Moves of this type</h3><hr>";
+                    echo "<hr><br><br><br><h3>Moves of this type</h3><hr><table id = 'movedetail'> <tr><th>Move</th><th>Type</tt><th>Category</th><th>Base Power</th><th>Accuracy</th><th>Details</th></tr>";
                     foreach($db->query("select * from move_table where typing = '" . htmlspecialchars($_GET["id"]) . "' order by name") as $row){
-                        echo "<a href='move.php?id=" .  $row['name'] . "'>" . $row['name'] . "</a>\t| <a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a>" . "\t| " . $row['style'] . "\t";
+                        echo "<tr><td> <a href='move.php?id=" . $row['name'] . "'>" . $row['name'] . "</td><td><a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a></td><td>" . $row['style'] . "</td><td>";
                         if($row['power'] != null)
-                            echo "| " . $row['power'];
+                            echo $row['power'];
                         else
-                            echo "| --";
-                        echo "\t| " . $row['accuracy'] . "\t| " . $row['detail'] . "<br>";
+                            echo "--";
+                        echo "</td><td> " . $row['accuracy'] . "</td><td>" . $row['detail'] . "</td><tr>";
                     }
+                    echo "</table>";
                 }
                 catch(PDOException $ex){
                     echo "Error!: " . $ex->getMessage();

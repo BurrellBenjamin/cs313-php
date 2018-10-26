@@ -13,7 +13,7 @@ create sequence s_sets
 create sequence s_abilities
 	start with 5000;
 
-create type typing as enum ('fairy', 'steel', 'dark', 'dragon', 'ghost', 'rock', 'bug', 'psychic', 'flying', 'ground', 'poison', 'fighting', 'ice', 'grass', 'electric', 'water', 'fire', 'normal');
+create type typing as enum ('bug', 'dark', 'dragon', 'electric', 'fairy', 'fighting', 'fire', 'flying', 'ghost', 'grass', 'ground', 'ice',  'normal', 'poison', 'psychic', 'rock', 'steel', 'water', 'none');
 
 create type stat as enum ('hp', 'attack', 'defense', 'sp. attack', 'sp. defense', 'speed');
 
