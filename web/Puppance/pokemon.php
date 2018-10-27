@@ -8,14 +8,14 @@
         <script>
             function showExport(number)
             {
-                if (document.getElementById('exportable' + number).style.display == 'none')
+                if (document.getElementById('setExportables' + number).style.display == 'none')
                 {
-                    document.getElementById('exportable' + number).style.display = 'inline';
+                    document.getElementById('setExportables' + number).style.display = 'inline';
                     document.getElementById('details' + number).style.display = 'none';
                 }
                 else
                 {
-                    document.getElementById('exportable' + number).style.display = 'none';
+                    document.getElementById('setExportables' + number).style.display = 'none';
                     document.getElementById('details' + number).style.display = 'inline';
                 }
             }
