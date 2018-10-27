@@ -11,12 +11,12 @@
                 if (document.getElementById('setExportable' + number).style.display == 'none')
                 {
                     document.getElementById('setExportable' + number).style.display = 'inline';
-                    document.getElementById('details' + number).style.display = 'none';
+                    document.getElementById('detail' + number).style.display = 'none';
                 }
                 else
                 {
                     document.getElementById('setExportable' + number).style.display = 'none';
-                    document.getElementById('details' + number).style.display = 'inline';
+                    document.getElementById('detail' + number).style.display = 'inline';
                 }
             }
         </script>
