@@ -6,7 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="puppance.css">
 		<meta charset="utf-8">
         <script>
-            function showhide(number)
+            function showExport(number)
             {
                 if (document.getElementById('exportable' + number).style.display == 'none')
                 {
