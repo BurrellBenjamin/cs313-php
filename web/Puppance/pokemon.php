@@ -5,6 +5,21 @@
         <title>Puppance Strategy Pokedex - <?php echo htmlspecialchars($_GET['id']); ?></title>
 		<link rel="stylesheet" type="text/css" href="puppance.css">
 		<meta charset="utf-8">
+        <script>
+            function showhide(number)
+            {
+                if (document.getElementById('exportable' + number).style.display == 'none')
+                {
+                    document.getElementById('exportable' + number).style.display = 'inline';
+                    document.getElementById('details' + number).style.display = 'none';
+                }
+                else
+                {
+                    document.getElementById('exportable' + number).style.display = 'none';
+                    document.getElementById('details' + number).style.display = 'inline';
+                }
+            }
+        </script>
     </head>
     <body>
         <header><?php include 'header.php'; ?></header>
@@ -43,8 +58,10 @@
                     
                     //display sets
                     echo "<h2>Strategies:<h2>";
+                    $x = 0;
                     foreach($db->query("select * from set_table where pokemon = '" . htmlspecialchars($_GET["id"]) . "' order by index") as $row){
-                        echo "<h3>" . $row['name'] . "</h3><div class='details'>Move 1:\t <a href='move.php?id=" . $row['move1'] . "'>" . $row['move1'] . "</a><br>Move 2:\t <a href='move.php?id=" . $row['move2'] . "'>" . $row['move2'] . "</a><br>Move 3:\t<a href='move.php?id=" . $row['move3'] . "'>" . $row['move3'] . "</a><br>Move 4:\t<a href='move.php?id=" . $row['move4'] . "'>" . $row['move4'] . "</a><br>Item:\t<a href='item.php?id=" . $row['item'] . "'>" . $row['item'] . "</a><br>Ability:\t<a href='ability.php?id=" . $row['ability'] . "'>" . $row['ability'] . "</a><br>Nature:\t" . $row['nature'] . "<br>EVs:\t";
+                        echo "<button type='button' onclick = 'showExport(" . $x  . ")'>Export</button>"
+                        echo "<h3>" . $row['name'] . "</h3><div class='details" . $x . "'>Move 1:\t <a href='move.php?id=" . $row['move1'] . "'>" . $row['move1'] . "</a><br>Move 2:\t <a href='move.php?id=" . $row['move2'] . "'>" . $row['move2'] . "</a><br>Move 3:\t<a href='move.php?id=" . $row['move3'] . "'>" . $row['move3'] . "</a><br>Move 4:\t<a href='move.php?id=" . $row['move4'] . "'>" . $row['move4'] . "</a><br>Item:\t<a href='item.php?id=" . $row['item'] . "'>" . $row['item'] . "</a><br>Ability:\t<a href='ability.php?id=" . $row['ability'] . "'>" . $row['ability'] . "</a><br>Nature:\t" . $row['nature'] . "<br>EVs:\t";
                         if($row['hp'] != 0)
                             echo $row['hp'] . " HP /";
                         if($row['attack'] != 0)
@@ -63,7 +80,29 @@
                            echo $row['spdefense'] . " SpDef";
                         if($row['speed'] != 0)
                             echo $row['speed'] . " Spe";
-                        echo "<br><h4>Set Details<h4><br>" . $row['details'] . "<hr>";
+                        echo "</div><textarea id='setExportable" . $x ."' style='display:none;' readonly rows='8'>"; 
+                        echo $row['pokemon'] . " @ " . $row['item'] . "<br>Ability: " . $row['ability'] . "<br>EVs: ";
+                        if($row['hp'] != 0)
+                            echo $row['hp'] . " HP /";
+                        if($row['attack'] != 0)
+                            echo $row['attack'] . " Atk /";
+                        if($row['defense'] != 0 && ($row['spattack'] != 0 || $row['spdefense'] != 0 || $row['speed'] != 0))
+                            echo $row['defense'] . " Def /";
+                        else if ($row['defense'] != 0)
+                           echo $row['defense'] . " Def";
+                        if($row['spattack'] != 0 && ($row['spdefense'] != 0 || $row['speed'] != 0))
+                            echo $row['spattack'] . " SpAtk /";
+                        else if ($row['spattack'] != 0)
+                           echo $row['spattack'] . " SpAtk";
+                        if($row['spdefense'] != 0 && $row['speed'] != 0)
+                            echo $row['spdefense'] . " SpDef /";
+                        else if ($row['spdefense'] != 0)
+                           echo $row['spdefense'] . " SpDef";
+                        if($row['speed'] != 0)
+                            echo $row['speed'] . " Spe";
+                        echo "<br>" . $row['nature'] . " Nature<br>- " . $row['move1'] . "<br>- " . $row['move2'] . "<br>- " . $row['move3'] . "<br>- " . $row['move4'];
+                        echo "</textarea><br><h4>Set Details<h4><br>" . $row['details'] . "<hr>";
+                        $x++;
                     }
                     
                     //display movepool                    
@@ -82,7 +121,7 @@
                     echo "Error!: " . $ex->getMessage();
                     die();
                 }
-                ?>    
+                ?>
         </main>
     </body>
 </html>
