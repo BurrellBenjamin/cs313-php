@@ -82,8 +82,8 @@
                             echo $row['speed'] . " Spe";
                         echo "</div><textarea id='setExportable" . $x ."' style='display:none;width:75%' readonly rows='8'>"; 
                         echo $row['pokemon'] . " @ " . $row['item'] . "
-                        Ability: " . $row['ability'] . "
-                        EVs: ";
+Ability: " . $row['ability'] . "
+EVs: ";
                         if($row['hp'] != 0)
                             echo $row['hp'] . " HP /";
                         if($row['attack'] != 0)
@@ -103,11 +103,11 @@
                         if($row['speed'] != 0)
                             echo $row['speed'] . " Spe";
                         echo "
-                        " . $row['nature'] . " Nature
-                        - " . $row['move1'] . "
-                        - " . $row['move2'] . "
-                        - " . $row['move3'] . "
-                        - " . $row['move4'];
+" . $row['nature'] . " Nature
+- " . $row['move1'] . "
+- " . $row['move2'] . "
+- " . $row['move3'] . "
+- " . $row['move4'];
                         echo "</textarea><br><h4>Set Details<h4><br>" . $row['details'] . "<hr>";
                         $x++;
                     }
