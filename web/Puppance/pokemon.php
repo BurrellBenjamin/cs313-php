@@ -11,12 +11,12 @@
                 if (document.getElementById('setExportable' + number).style.display == 'none')
                 {
                     document.getElementById('setExportable' + number).style.display = 'inline';
-                    document.getElementById('detail' + number).style.display = 'none';
+                    document.getElementById('details' + number).style.display = 'none';
                 }
                 else
                 {
                     document.getElementById('setExportable' + number).style.display = 'none';
-                    document.getElementById('detail' + number).style.display = 'inline';
+                    document.getElementById('details' + number).style.display = 'inline';
                 }
             }
         </script>
@@ -80,7 +80,7 @@
                            echo $row['spdefense'] . " SpDef";
                         if($row['speed'] != 0)
                             echo $row['speed'] . " Spe";
-                        echo "</div><textarea id='setExportable" . $x ."' style='display:none;' readonly rows='8'>"; 
+                        echo "</div><textarea id='setExportable" . $x ."' style='display:none;width:75%' readonly rows='8'>"; 
                         echo $row['pokemon'] . " @ " . $row['item'] . "<br>Ability: " . $row['ability'] . "<br>EVs: ";
                         if($row['hp'] != 0)
                             echo $row['hp'] . " HP /";
