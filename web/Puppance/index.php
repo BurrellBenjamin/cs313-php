@@ -49,7 +49,7 @@
             ?>
                 <label>Search Puppance by Pokemon: </label>
                 <input type="text" name="id"><br>
-                <input type="submit" value = "search">
+                <input type="submit" value = "Search">
             </form>
         </main>
 	</body>
