@@ -1,3 +1,3 @@
 <?php
-echo '<hr><a href="index.php">Home</a> - <a href="pokemonList.php">Pokemon</a> - <a href="abilityList.php">Abilities</a> - <a href="itemList.php">Items</a> - <a href="moveList.php">Moves</a> - <a href="typeList.php">Pokemon Types</a> - <a href="tierlist.php">Tiers</a> <form action="pokemon.php?id=' . htmlspecialchars($_GET['id']) . '" method="get"><label>Search Puppance by Pokemon: </label><input type="text" name="id"> <input type="submit" value = "Search"></form><hr>'
+echo '<hr><a href="index.php">Home</a> - <a href="pokemonList.php">Pokemon</a> - <a href="abilityList.php">Abilities</a> - <a href="itemList.php">Items</a> - <a href="moveList.php">Moves</a> - <a href="typeList.php">Pokemon Types</a> - <a href="tierlist.php">Tiers</a> <form action="results.php?id=' . htmlspecialchars($_GET['id']) . '" method="get"><label>Search Puppance by Pokemon: </label><input type="text" name="id"> <input type="submit" value = "Search"></form><hr>'
 ?>

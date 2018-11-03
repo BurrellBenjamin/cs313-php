@@ -24,15 +24,6 @@
                 $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                echo '';
-
-                if (isset($_POST['name'])) {
-                    foreach ($db->query("select * from scriptures where book like '%" . htmlspecialchars($_POST['book']) . "%'") as $row) {
-                      echo "<a href='scripturedisplay.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . "</span>";
-                      echo '</a><br>';
-                    }
-                  }
             ?>
             
             <h1>Puppance Strategy Pokedex</h1>
@@ -45,7 +36,7 @@
             match, so these sets may perform suboptimally in normal ladder play.</p>
             
             <?php
-                echo "<form action='pokemon.php?id=" . htmlspecialchars($_GET['id']) . "' method='get'>";
+                echo "<form action='results.php?id=" . htmlspecialchars($_GET['id']) . "' method='get'>";
             ?>
                 <label>Search Puppance by Pokemon: </label>
                 <input type="text" name="id"><br>
