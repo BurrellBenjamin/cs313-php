@@ -27,7 +27,7 @@
                 if($db->query($querystring) != false)
                 {
                     echo "<table id = 'pokemondetail'><tr><th>Pokemon</th><th>Type</th><th>Abilities</th><th>Tier</th></tr>";
-                    for($db->query($querystring) as $row)
+                    foreach($db->query($querystring) as $row)
                     {
                         echo "<tr><td><a href='pokemon.php?id=" . $row["name"] . "'> " . $row['name'] . "</a></td><td><a href='type.php?id=" . $row['typing1']  . "'>" . $row['typing1'] . "</a>";
                             if($row['typing2'] != 'none')
@@ -41,7 +41,7 @@
                 if($db->query($querystring) != false)
                 {
                     echo "<table id='abilitydetail'><tr><th>Ability</th><th>Details</th></tr>";
-                    for($db->query($querystring) as $row)
+                    foreach($db->query($querystring) as $row)
                     {
                         echo "<tr><td><a href='ability.php?id=" . $row['name'] . "'>" . $row['name'] . "</a></td><td> " . $row['detail'] . "</td></tr>";
                     }
@@ -52,7 +52,7 @@
                 if($db->query($querystring) != false)
                 {
                     echo "<table id='itemdetail'><tr><th>Item</th><th>Details</th></tr>";
-                    for($db->query($querystring) as $row)
+                    foreach($db->query($querystring) as $row)
                     {
                         echo "<tr><td><a href='item.php?id=" . $row['name'] . "'>" . $row['name'] . "</a></td><td>" . $row['detail'] . "</td></tr>";
                     }
@@ -63,7 +63,7 @@
                 if ($db->query($querystring) != false)
                 {
                     echo "<table id = 'movedetail'> <tr><th>Move</th><th>Type</tt><th>Category</th><th>Base Power</th><th>Accuracy</th><th>Details</th></tr>";
-                    for($db->query($querystring) as $row)
+                    foreach($db->query($querystring) as $row)
                     {
                         echo "<tr><td> <a href='move.php?id=" . $row['name'] . "'>" . $row['name'] . "</td><td><a href='type.php?id=" . $row['typing']  . "'>" . $row['typing'] . "</a></td><td>" . $row['style'] . "</td><td>";
                             if($row['power'] != null)
@@ -79,7 +79,7 @@
                 if ($db->query($querystring) != false)
                 {
                     echo "<table><tr><th>Typings</th></tr>";
-                    for($db->query($querystring) as $row)
+                    foreach($db->query($querystring) as $row)
                     {
                         echo "<tr><td><a href='type.php?id=" .  $row['unnest'] . "'>" . $row['unnest'] . "</a><hr></td></tr>";
                     }
