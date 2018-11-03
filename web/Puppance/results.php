@@ -81,7 +81,7 @@
                     echo "<table><tr><th>Typings</th></tr>";
                     foreach($db->query($querystring) as $row)
                     {
-                        echo "<tr><td><a href='type.php?id=" .  $row['unnest'] . "'>" . $row['unnest'] . "</a><hr></td></tr>";
+                        echo "<tr><td><a href='type.php?id=" .  $row['typing'] . "'>" . $row['typing'] . "</a><hr></td></tr>";
                     }
                     echo "</table><br><hr>";
                 }
@@ -92,7 +92,7 @@
                     echo "<table><tr><th>Tiers</th></tr>";
                     foreach($db->query($querystring) as $row)
                     {
-                        echo "<tr><td><a href='tier.php?id=" . $row['unnest'] . "'>" . $row['unnest'] . "</a><hr></td></tr>";
+                        echo "<tr><td><a href='tier.php?id=" . $row['tier'] . "'>" . $row['tier'] . "</a><hr></td></tr>";
                     }
                     echo "</table><br><hr>";
                 }
