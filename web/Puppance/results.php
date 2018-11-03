@@ -23,7 +23,7 @@
 
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 
-                $querystring = "select * from pokemon_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')"
+                $querystring = "select * from pokemon_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
                 if($db->query($querystring) != false)
                 {
                     echo "<table id = 'pokemondetail'><tr><th>Pokemon</th><th>Type</th><th>Abilities</th><th>Tier</th></tr>";
@@ -36,6 +36,7 @@
                     }
                     echo "</table><br><hr>"; 
                 }
+                
                 $querystring = "select * from ability_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
                 if($db->query($querystring) != false)
                 {
@@ -59,7 +60,8 @@
                 }
                 
                 $querystring = "select * from move_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
-                if ($db->query($querystring) != false){
+                if ($db->query($querystring) != false)
+                {
                     echo "<table id = 'movedetail'> <tr><th>Move</th><th>Type</tt><th>Category</th><th>Base Power</th><th>Accuracy</th><th>Details</th></tr>";
                     for($db->query($querystring) as $row)
                     {
@@ -72,6 +74,7 @@
                     }
                     echo "</table><br><hr>";
                 }
+               
                 $querystring = "select * from unnest(enum_range('bug'::typing, 'water'::typing)) as typing where upper(cast(typing as text)) like upper('" . htmlspecialchars($_GET['id']) . "%')";
                 if ($db->query($querystring) != false)
                 {
