@@ -23,7 +23,7 @@
 
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 
-                $querystring = "select * from pokemon_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
+                $querystring = "select * from pokemon_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%') order by name";
                 if($db->query($querystring)->rowCount() != 0)
                 {
                     echo "<table id = 'pokemondetail'><tr><th>Pokemon</th><th>Type</th><th>Abilities</th><th>Tier</th></tr>";
@@ -37,7 +37,7 @@
                     echo "</table><br><hr>"; 
                 }
                 
-                $querystring = "select * from ability_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
+                $querystring = "select * from ability_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%') order by name";
                 if($db->query($querystring)->rowCount() != 0)
                 {
                     echo "<table id='abilitydetail'><tr><th>Ability</th><th>Details</th></tr>";
@@ -48,7 +48,7 @@
                     echo "</table><br><hr>";
                 }
                 
-                $querystring = "select * from item_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
+                $querystring = "select * from item_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%') order by name";
                 if($db->query($querystring)->rowCount() != 0)
                 {
                     echo "<table id='itemdetail'><tr><th>Item</th><th>Details</th></tr>";
@@ -59,7 +59,7 @@
                     echo "</table><br><hr>";
                 }
                 
-                $querystring = "select * from move_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
+                $querystring = "select * from move_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')order by name";
                 if($db->query($querystring)->rowCount() != 0)
                 {
                     echo "<table id = 'movedetail'> <tr><th>Move</th><th>Type</tt><th>Category</th><th>Base Power</th><th>Accuracy</th><th>Details</th></tr>";
