@@ -24,7 +24,7 @@
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 
                 $querystring = "select * from pokemon_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
-                if($db->query($querystring).rowCount() != 0)
+                if($db->query($querystring)->rowCount() != 0)
                 {
                     echo "<table id = 'pokemondetail'><tr><th>Pokemon</th><th>Type</th><th>Abilities</th><th>Tier</th></tr>";
                     foreach($db->query($querystring) as $row)
@@ -38,7 +38,7 @@
                 }
                 
                 $querystring = "select * from ability_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
-                if($db->query($querystring).rowCount() != 0)
+                if($db->query($querystring)->rowCount() != 0)
                 {
                     echo "<table id='abilitydetail'><tr><th>Ability</th><th>Details</th></tr>";
                     foreach($db->query($querystring) as $row)
@@ -49,7 +49,7 @@
                 }
                 
                 $querystring = "select * from item_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
-                if($db->query($querystring).rowCount() != 0)
+                if($db->query($querystring)->rowCount() != 0)
                 {
                     echo "<table id='itemdetail'><tr><th>Item</th><th>Details</th></tr>";
                     foreach($db->query($querystring) as $row)
@@ -60,7 +60,7 @@
                 }
                 
                 $querystring = "select * from move_table where upper(name) like upper('" . htmlspecialchars($_GET['id']) . "%')";
-                if($db->query($querystring).rowCount() != 0)
+                if($db->query($querystring)->rowCount() != 0)
                 {
                     echo "<table id = 'movedetail'> <tr><th>Move</th><th>Type</tt><th>Category</th><th>Base Power</th><th>Accuracy</th><th>Details</th></tr>";
                     foreach($db->query($querystring) as $row)
@@ -76,7 +76,7 @@
                 }
                
                 $querystring = "select * from unnest(enum_range('bug'::typing, 'water'::typing)) as typing where upper(cast(typing as text)) like upper('" . htmlspecialchars($_GET['id']) . "%')";
-                if($db->query($querystring).rowCount() != 0)
+                if($db->query($querystring)->rowCount() != 0)
                 {
                     echo "<table><tr><th>Typings</th></tr>";
                     foreach($db->query($querystring) as $row)
@@ -87,7 +87,7 @@
                 }
                 
                 $querystring = "select * from unnest(enum_range('T1'::tier, 'T4'::tier)) as tier where upper(cast(tier as text)) like upper('" . htmlspecialchars($_GET['id']) . "%')";
-                if($db->query($querystring).rowCount() != 0)
+                if($db->query($querystring)->rowCount() != 0)
                 {
                     echo "<table><tr><th>Tiers</th></tr>";
                     foreach($db->query($querystring) as $row)
